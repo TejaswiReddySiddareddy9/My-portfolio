@@ -180,3 +180,6 @@ container.addEventListener('touchmove', (e) => {
 
 // Start the auto rotation animation
 startAnimation();
+
+
+

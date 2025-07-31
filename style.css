@@ -206,30 +206,6 @@ body {
 }
 
 /* Responsive Nav */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 64px;
-    right: 0;
-    background: var(--clr-bg-glass);
-    height: calc(100vh - 64px);
-    width: 260px;
-    flex-direction: column;
-    gap: 2.2rem;
-    padding: 2rem 1.6rem;
-    border-left: 1px solid var(--clr-border);
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-    box-shadow: -6px 0 34px var(--clr-shadow);
-    user-select: none;
-  }
-  .nav-links.active {
-    transform: translateX(0);
-  }
-  .hamburger {
-    display: flex;
-  }
-}
 
 /* About Me */
 .about-container {
@@ -328,14 +304,6 @@ h1 {
 }
 
 /* Skills */
-.skills-grid {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
-}
 
 .skill-card {
   position: relative;
@@ -562,29 +530,6 @@ h1 {
   }
 }
 
-/* Responsive timeline */
-@media (max-width: 768px) {
-  .timeline-container::before {
-    left: 8px;
-    top: 40px;
-    height: calc(100% - 40px);
-  }
-  .timeline-item {
-    width: 100%;
-    margin-left: 32px;
-    margin-bottom: 2rem;
-  }
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0 !important;
-    transform-origin: center;
-  }
-  .timeline-item::before {
-    left: -26px !important;
-    right: auto !important;
-    top: 12px;
-  }
-}
 
 /* Projects Grid */
 .projects-grid {
@@ -947,6 +892,7 @@ input:checked + .slider::before {
   cursor: grabbing;
 }
 /* Center the whole skills section box */
+
 .skills-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -956,7 +902,23 @@ input:checked + .slider::before {
   padding: 20px;
   justify-content: center;
 }
+@media (max-width: 480px) {
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 360px;
+  }
+}
 
+/* iPhone SE and similar small screens */
+@media (max-width: 380px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 250px;
+  }
+}
+
+
+/* For screens 375px and below: 2 columns */
 /* Square skill box styling */
 .skill-item {
   width: 110px;
@@ -1232,4 +1194,32 @@ input:checked + .slider::before {
   cursor: not-allowed;
   pointer-events: none;
   color: #666;
+}
+/* Show hamburger and hide nav links on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 64px;
+    right: 0;
+    background: var(--clr-bg-glass);
+    height: calc(100vh - 64px);
+    width: 260px;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 2rem 1.6rem;
+    border-left: 1px solid var(--clr-border);
+    box-shadow: -6px 0 34px var(--clr-shadow);
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0);
+  }
 }
