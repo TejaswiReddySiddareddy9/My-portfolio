@@ -1,211 +1,485 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="queries.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tejaswi Reddy Siddareddy - Full Stack Developer</title>
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  
 </head>
 <body>
-    <nav id="desktop-nav">
-       <div class="Name">Tejaswi Reddy Siddareddy</div>
-       <div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills & Experience</a></li>
-            <li><a href="#my projects">My Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <!-- Background Blobs -->
+  <div class="blobs-background">
+   <div class="blob blob1"></div>
+   <div class="blob blob2"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" tabindex="0">Tejaswi Reddy</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" tabindex="0" class="nav-link">About Me</a></li>
+        <li><a href="#education" tabindex="0" class="nav-link">Education</a></li>
+        <li><a href="#skills" tabindex="0" class="nav-link">Skills</a></li>
+        <li><a href="#experience" tabindex="0" class="nav-link">Experience</a></li>
+        <li><a href="#projects" tabindex="0" class="nav-link">Projects</a></li>
+        <li><a href="#contact" tabindex="0" class="nav-link">Contact Me</a></li>
+      </ul>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Dark Mode Toggle -->
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="dark-toggle" aria-checked="false" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="bubble-wrapper">
+      <div class="floating-bubble" style="left: 5%; top: 40%">Code</div>
+      <div class="floating-bubble" style="left: 16%; top: 60%;">Design</div>
+      <div class="floating-bubble" style="left: 80%; top: 63%;">Debug</div>
+      <div class="floating-bubble" style="left: 90%; top: 42%;">Deploy</div>
+    </div>
+    <h2 class="section-title">
+      About Me
+    </h2>
+    <div class="about-container">
+      <div class="about-image-wrapper" tabindex="0" aria-label="Profile picture of Tejaswi Reddy Siddareddy">
+        <img
+          src="assets/WhatsApp Image 2025-04-17 at 14.41.42_bd3efba1-modified.png"
+          alt="Tejaswi Reddy Portrait"
+          class="about-image"
+        />
+      </div>
+      <div class="about-intro">
+       <h1 class="hi-text zoom-in-animation">Hi, I'm <span>Tejaswi</span></h1>
+       <p class="about-text" tabindex="0" data-aos="fade-up" data-aos-delay="300">
+        I'm a Full Stack Developer Passionate about delivering secure, scalable web applications using Java, Spring Boot, React, and AWS.
+        Skilled in AI-powered automation to enhance business processes and user experiences.
+       </p>
+       <div class="about-links" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://github.com/TejaswiReddySiddareddy9" target="_blank" aria-label="GitHub Profile">
+         <img src="assets/icons8-github-48.png" alt="GitHub" class="about-icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/tejaswi-reddy-siddareddy-274614376/" target="_blank" aria-label="LinkedIn Profile">
+         <img src="assets/icons8-linkedin.gif" alt="LinkedIn" class="about-icon" />
+        </a>
        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="Name"> Tejaswi Reddy Siddareddy</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links"> 
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Skills & Experience</a></li>
-            <li><a href="#my projects" onclick="toggleMenu()">My Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>  
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/WhatsApp Image 2025-04-17 at 14.41.42_bd3efba1-modified.png" alt="Tejaswi Reddy Profile picture">
-        </div>
-        <div class="section__text">
-            <h1 class="title">Hi, I'm Tejaswi Reddy</h1>
-            <p class="section__text__p1">A Full-Stack Explorer who loves to bring ideas to life — from pixel to database, front to back, logic to magic!!</p>
-            <div class="btn-container">
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Me
-                </button>
-            </div>
-            <div id="socials-container">
-                <img
-                 src="./assets/linkedin.png" alt="My Linkedln profile"
-                class="icon" onclick="location.href='https://www.linkedin.com/in/tejaswireddy97'"
-                />
-                <img
-                 src="./assets/github.png" alt="My Github profile"
-                class="icon" onclick="location.href='https://github.com/tejaswireddy9'"
-                />
-            </div>  
-        </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <p class="section__text__p1">Getting into the details..</p> 
-            <h1 class="title1">About me !!</h1> 
-            <div class="section-container">
-               <div class="section__pic-container">
-                  <img src="./assets/aboutImage.png" alt="About picture"
-                  class="about-pic">
-               </div>
-               <div class="about-details-container">
-                 <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="icon picture" class="icon">
-                        <h3>Hackathons</h3>
-                        <p>Smart India Hackathon <br />Rural Hackathon <br />Toy Hackathon</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="education picture" class="icon">
-                        <h3>Education</h3>
-                        <p>B.E (CSE)- 9.36/10 <br />R.M.D Engineering College <br />M.S (Computer Science)- 4.0/4.0 <br /> University of North Texas </p>
-                    </div>
-                 </div>
-                 <div class="text-container">
-                    <p>
-                        I'm a full-stack enthusiast with a deep passion for building dynamic web applications, designing responsive frontends, and developing robust backend systems that work seamlessly together.
-                    </p>
-                 </div>
-               </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
-        onclick="location.href='./#experience'"/>
-    </section>
-    <section id="experience">
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="detail-container">
-                    <h2 class="experience-sub-title">Skills</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/icons8-python-48.png" alt="python" class="icon"/>
-                            <h3>Python</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-html-48.png" alt="Html" class="icon"/>
-                            <h3>Html</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-javascript-48.png" alt="javascript" class="icon"/>
-                            <h3>Javascript</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-css-48.png" alt="css" class="icon"/>
-                            <h3>CSS</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/java.png" alt="Java" class="icon"/>
-                            <h3>Java</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-git-48.png" alt="git" class="icon"/>
-                            <h3>Git</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/physics.png" alt="React" class="icon"/>
-                            <h3>React</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-aws-48.png" alt="AWS" class="icon"/>
-                            <h3>AWS</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-docker-48.png" alt="docker" class="icon"/>
-                            <h3>Docker</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-spring-boot-48.png" alt="springboot" class="icon"/>
-                            <h3>Springboot</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-mongo-db-48.png" alt="mongodb" class="icon"/>
-                            <h3>MongoDB</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-my-sql-48.png" alt="MySQL" class="icon"/>
-                            <h3>MySQL</h3>
-                        </article>
-                    
-                        <article>
-                            <img src="./assets/Junit.png" alt="Junit" class="icon"/>
-                            <h3>Junit</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/Jest.png" alt="Jest" class="icon"/>
-                            <h3>Jest</h3>
-                        </article>
-                        <article>
-                            <img src="./assets/icons8-tailwind-css-48.png" alt="tailwind" class="icon"/>
-                            <h3>Tailwind</h3>
-                        </article>
-                        
-                    </div>
-                </div>
-                <div class="detail-container">
-                    <h2 class="experience-sub-title">Experience</h2>
-                    <div class="det-container">
-                        <img src="./assets/experience.png" alt="icon picture" class="icon">
-                        <h3>Software Development Intern</h3>
-                        <p> Codsoft <br />Jan 2023-July 2023 <br />Technologies used:React, JavaScript,Bootstrap, ASP.NET, C#,SQL</p>
-                    </div>
-                    <div class="det-container">
-                        <img src="./assets/education.png" alt="education picture" class="icon">
-                        <h3>Graduate Instructional Assistant</h3>
-                        <p>University of North Texas <br />August 2023- present <br />Skills: Data structures and Algorithm design, Software Development,React, C#, SQL, Visual Studio, </p>
-                    </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
-        onclick="location.href='./#projects'"/>
-    </section>
-    <section id="projects">
-        <h1 class="title1">My Projects</h1>
-        <div class="projects-container">
-          <div class="project-card">
-            <h3>Full Stack Food Ordering System with Java, Springboot, React.js and MYSQL </h3>
-          </div>
-      
-          <div class="project-card">
-            <h3>Full Stack Hotel Booking System using Java, Springboot, Spring Security and React.js</h3>
-          </div>
-      
-          <div class="project-card">
-            <h3>Roommate Task Assigner and Manager using React.js, Tailwind CSS And Java </h3>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
-        <h1 class="title1">Contact Me</h1>
-        <div class="contact-container">
-          <p>If you'd like to work together or have any questions, feel free to reach out!</p>
-          <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:tejaswiireddy910@gmail.com">tejaswiireddy910@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+19405970948">+1 (940) 597-0948</a></p>
-            <p><strong>Location:</strong> Denton, Texas</p>
-          </div>
-        </div>
-      </section>      
-    <script src="script.js"></script>
+       <div class="about-links">
+        <a href="assets/Tejaswi Reddy_Siddareddy.pdf" class="resume-btn" target="_blank" aria-label="Open Resume PDF">
+    📄 Resume </a>
+       </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave SVG -->
+  <svg
+    class="wave-transition wave1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="var(--clr-bg)"
+      fill-opacity="1"
+      d="M0,48L48,42.7C96,37,192,27,288,37.3C384,48,480,80,576,85.3C672,91,768,69,864,53.3C960,37,1056,27,1152,32C1248,37,1344,59,1392,69.3L1440,80L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+    ></path>
+  </svg>
+
+  <!-- Education -->
+  <section id="education" class="section glass education-section" data-aos="fade-up">
+  <h2 class="section-title">Education</h2>
+  <div class="education-container">
+    <img src="assets/aboutImage.png" alt="Girl studying" class="education-image">
+    <div class="education-content">
+      <div class="edu-box">
+        <h2>University of North Texas</h2>
+        <p>Master's in Computer Science, 2023–2025<br>GPA: 4.0</p>
+      </div>
+      <div class="edu-box">
+        <h2>R.M.D Engineering College</h2>
+        <p>B.E. in Computer Science and Engineering, 2019–2023<br>GPA: 9.36</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Skills -->
+  <section id="skills" class="section glass" data-aos="fade-up">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-list">
+    <div class="skill-item">
+      <img src="assets/java.png" alt="Java Icon" class="skill-icon" />
+      <span>Java</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-html-48.png" alt="html Icon" class="skill-icon" />
+      <span>HTML</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-javascript-48.png" alt="JavaScript Icon" class="skill-icon" />
+      <span>Javascript</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-css-48.png" alt="CSS Icon" class="skill-icon" />
+      <span>CSS</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/JUnit.png" alt="JUnit Icon" class="skill-icon" />
+      <span>JUnit</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/Jest.png" alt="Jest Icon" class="skill-icon" />
+      <span>Jest</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/redux.svg" alt="Redux Icon" class="skill-icon" />
+      <span>Redux</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-tailwind-css-48.png" alt="CSS Icon" class="skill-icon" />
+      <span>Tailwind CSS</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-spring-boot-48.png" alt="Spring Boot Icon" class="skill-icon" />
+      <span>Spring Boot</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-my-sql-48.png" alt="MYSQL Icon" class="skill-icon" />
+      <span>MYSQL</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-mongo-db-48.png" alt="MongoDB Icon" class="skill-icon" />
+      <span>MongoDB</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-kubernetes-48.png" alt="kubernetes Icon" class="skill-icon" />
+      <span>Kubernetes</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-git-48.png" alt="git Icon" class="skill-icon" />
+      <span>Git</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-docker-48.png" alt="docker Icon" class="skill-icon" />
+      <span>Docker</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-aws-48.png" alt="AWS Icon" class="skill-icon" />
+      <span>AWS</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-react-js-48.png" alt="React Icon" class="skill-icon" />
+      <span>React</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-redis-30.png" alt="Redis Icon" class="skill-icon" />
+      <span>Redis</span>
+    </div>
+    <div class="skill-item">
+      <img src="assets/icons8-artificial-intelligence-48.png" alt="AI Icon" class="skill-icon" />
+      <span>AI</span>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Wave SVG -->
+  <svg
+    class="wave-transition wave2"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="var(--clr-bg)"
+      fill-opacity="1"
+      d="M0,32L40,37.3C80,43,160,53,240,69.3C320,85,400,107,480,117.3C560,128,640,128,720,112C800,96,880,64,960,48C1040,32,1120,32,1200,42.7C1280,53,1360,75,1400,85.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+    ></path>
+  </svg>
+
+  <!-- Experience -->
+  <!-- Add this inside your main, replacing the old experience section -->
+
+<section id="experience" class="section glass" data-aos="fade-up">
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="cube-container" id="cube-container">
+    <div class="cube" id="cube">
+      <div class="face face1">
+        <h2>Citibank - Full Stack Java Developer</h2>
+        <p><em>Jan 2024 - Present</em></p>
+        <ul>
+          <li>Built AI-powered investment platform with React & Spring Boot.</li>
+          <li>Designed scalable AWS cloud services & secure APIs.</li>
+          <li>Implemented AI risk scoring and portfolio forecasting.</li>
+        </ul>
+      </div>
+      <div class="face face2">
+        <h2>TruStage - Full Stack Developer</h2>
+        <p><em>Nov 2021 - Sep 2023</em></p>
+        <ul>
+          <li>Developed secure digital signature platform with React & Spring Boot.</li>
+          <li>Integrated AI-based fraud detection and anomaly alerts.</li>
+          <li>Managed AWS serverless components & CI/CD pipelines.</li>
+        </ul>
+      </div>
+      <div class="face face3">
+        <h2>Simmons Bank - Full Stack Developer</h2>
+        <p><em>Jan 2020 - Oct 2021</em></p>
+        <ul>
+          <li>Created secure HSA web app with real-time updates and mobile support.</li>
+          <li>Built backend microservices and caching layers using Redis.</li>
+          <li>Automated deployments with AWS ECS & Jenkins.</li>
+        </ul>
+      </div>
+      <div class="face face4">
+        <h2>Actics - Full Stack Developer</h2>
+        <p><em>Apr 2018 - Dec 2019</em></p>
+        <ul>
+          <li>Built medical info portals with React and conversational AI chatbots.</li>
+          <li>Developed microservices adhering to HIPAA & GDPR compliance.</li>
+          <li>Deployed on AWS with autoscaling and event-driven architecture.</li>
+        </ul>
+      </div>
+      <div class="face face5">
+      </div>
+      <div class="face face6">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section" data-aos="fade-up">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-grid">
+    
+    <!-- Project Card 1 -->
+    <div
+  class="project-card"
+  tabindex="0"
+  data-aos="fade-up"
+  data-aos-delay="100"
+  aria-label="Weather Forecasting App"
+>
+  <img
+    src="https://img.freepik.com/premium-photo/cloud-design_970907-1424.jpg"
+    alt="Weather Forecasting App"
+    class="project-image"
+  />
+  <div class="project-details">
+    <h3>Weather Forecasting App</h3>
+    <p>A responsive weather app that fetches real-time 6-day forecast using the OpenWeather API</p>
+    <div class="tech-stack">
+      <img src="assets/icons8-react-js-48.png" alt="React" title="React" />
+      <img src="assets/icons8-javascript-48.png" alt="Javascript" title="Javascript" />
+      <img src="assets/icons8-css-48.png" alt="CSS" title="CSS" />
+      <img src="assets/icons8-html-48.png" alt="Html" title="Html" />
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/TejaswiReddySiddareddy9/citi-wealth-builder" target="_blank" aria-label="GitHub repo for Citi Wealth Builder" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Project Card 2 -->
+    <div
+  class="project-card"
+  tabindex="0"
+  data-aos="fade-up"
+  data-aos-delay="100"
+  aria-label="Entertainment App"
+>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJIMqkOpFl_Q8Fvex4gnM7mvzShhOPkC5XjRdKbRf31Vk7DCj453KqpSK_t_HJGc8fMik&usqp=CAU"
+    alt="Entertainment App"
+    class="project-image"
+  />
+  <div class="project-details">
+    <h3>Entertainment App</h3>
+    <p>An App to display trending movies and series with trailers, cast and plot</p>
+    <div class="tech-stack">
+      <img src="assets/icons8-react-js-48.png" alt="React" title="React" />
+      <img src="assets/icons8-javascript-48.png" alt="Javascript" title="Javascript" />
+      <img src="assets/icons8-material-ui-48.png" alt="Material UI" title="Material UI" />
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/TejaswiReddySiddareddy9/citi-wealth-builder" target="_blank" aria-label="GitHub repo for Citi Wealth Builder" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</div>
+   <div
+  class="project-card"
+  tabindex="0"
+  data-aos="fade-up"
+  data-aos-delay="100"
+  aria-label="Roommate Management App"
+>
+  <img
+    src="assets/Screenshot 2025-07-30 233328.png"
+    alt="Roommate Management App"
+    class="project-image"
+  />
+  <div class="project-details">
+    <h3>Roommate Manager App</h3>
+    <p>A Platform for roommates to Assign tasks and remind each other to finish their tasks </p>
+    <div class="tech-stack">
+      <img src="assets/icons8-react-js-48.png" alt="React" title="React" />
+      <img src="assets/icons8-javascript-48.png" alt="Javascript" title="Javascript" />
+      <img src="assets/icons8-css-48.png" alt="CSS" title="CSS" />
+      <img src="assets/icons8-html-48.png" alt="Html" title="Html" />
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/TejaswiReddySiddareddy9/citi-wealth-builder" target="_blank" aria-label="GitHub repo for Citi Wealth Builder" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+
+  <!-- Contact Me -->
+  <section id="contact" class="section" data-aos="fade-up">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="contact-content" tabindex="0">
+    <p>Interested in collaborating or want to chat? Reach me at:</p>
+
+    <p>
+      <a href="mailto:tejaswiireddy910@gmail.com" aria-label="Send email to Tejaswi">
+        📧 tejaswiireddy910@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <a href="tel:+19409779289" aria-label="Call Tejaswi">
+        📞 +1 940-977-9289
+      </a>
+    </p>
+
+    <p class="location-info" data-aos="fade-up" data-aos-delay="200">
+      📍 Based in <strong>Denton, TX</strong>
+    </p>
+    <div class="map-container" data-aos="fade-up" data-aos-delay="300">
+      <iframe
+        src="https://maps.google.com/maps?q=708+W+Collins+St,+Denton,+TX&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="250"
+        style="border:0; filter: grayscale(100%);"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map of Denton, TX"
+      ></iframe>
+    </div>
+  </div>
+  </section>
+  
+
+  <script
+    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    defer
+  ></script>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script>
+  function loadParticles(theme) {
+    const isDark = theme === 'dark';
+    tsParticles.load("tsparticles", {
+      background: {
+        color: {
+          value: "transparent",
+        },
+      },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+          resize: true,
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: isDark ? "#ffffff" : ["#e75480","#afeeee"] // white on dark, dark gray on light
+        },
+        links: {
+          color: isDark ? "#ffffff" : "#d8bfd8",
+          distance: 150,
+          enable: true,
+          opacity: 0.3,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 1.2,
+          outModes: {
+            default: "bounce",
+          },
+        },
+        number: {
+          value: 50,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 3 },
+        },
+      },
+      detectRetina: true,
+    });
+  }
+
+  // Initial load based on theme attribute
+  const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  loadParticles(initialTheme);
+
+  // Listen for dark mode toggle change
+  const darkToggle = document.getElementById('dark-toggle');
+  darkToggle.addEventListener('change', () => {
+    const newTheme = darkToggle.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+
+    // Destroy old particles and reload with new colors
+    tsParticles.domItem(0).destroy();
+    loadParticles(newTheme);
+  });
+</script>
+
+<div id="tsparticles" style="position: fixed; z-index: -1; width: 100%; height: 100%;"></div>
+
 </body>
 </html>
