@@ -181,5 +181,21 @@ container.addEventListener('touchmove', (e) => {
 // Start the auto rotation animation
 startAnimation();
 
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
+if (!isTouchDevice) {
+  const cursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+
+  // Show/hide logic if needed
+  cursor.style.display = 'block';
+} else {
+  // Hide on mobile
+  const cursor = document.querySelector('.custom-cursor');
+  if (cursor) cursor.style.display = 'none';
+}
 
