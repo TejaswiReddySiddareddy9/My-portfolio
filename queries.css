@@ -163,4 +163,10 @@
   .switch {
     margin-left: auto;
   }
+  
+}
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
 }
