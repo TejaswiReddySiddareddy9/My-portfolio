@@ -1038,7 +1038,7 @@ input:checked + .slider::before {
 
 .resume-btn {
   background-color: var(--clr-accent);
-  color: white;
+  color:var(--clr-bg);
   padding: 0.6rem 1rem;
   border-radius: 20px;
   text-decoration: none;
@@ -1118,6 +1118,7 @@ input:checked + .slider::before {
   outline: none;
 }
 
+
 /* Image takes 50% height */
 .project-image {
   width: 100%;
@@ -1176,7 +1177,7 @@ input:checked + .slider::before {
 
 .project-links a {
   background: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-bg);
   padding: 0.4rem 1rem;
   border-radius: 6px;
   font-weight: 600;
