@@ -1187,7 +1187,7 @@ input:checked + .slider::before {
 }
 
 .project-links a:hover:not(.disabled-link) {
-  background: var(--clr-primary-dark);
+  background: var(--clr-primary);
 }
 
 .project-links a.disabled-link {
